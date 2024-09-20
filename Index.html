@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 85vh;
+            z-index: -1;
+            background-image: url("img/banner-bg.jpg");
+            background-size: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 85vh;
+            background-color: black;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: white;
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+            font-family: 'Wix Madefor Display', sans-serif;
+        }
+
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 10px 2px;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(216, 216, 216);
+        }
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            padding: 10px;
+            flex-direction: column;
+
+        }
+
+        .navbar li:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(216, 216, 216);
+
+
+
+        }
+
+        .dropdown-content a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .p_bake {
+            margin-top: 15vh;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Wix Madefor Display', sans-serif;
+        }
+
+        .heading_love {
+            color: white;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            font-size: 10vh;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            width: fit-content;
+            font-weight: bolder;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        .p_since {
+            margin-top: 3vh;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            width: 49vw;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Wix Madefor Display', sans-serif;
+        }
+
+        .menu_check {
+            display: block;
+            margin: 0 auto;
+            color: white;
+            background-color: rgb(190, 145, 61);
+            border: none;
+            padding: 15px 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .menu_check:hover {
+            opacity: 0.8;
+        }
+
+        .heading_catagory {
+            margin-top: 25vh;
+            padding-top: 8vh;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        .P_cat {
+            text-align: center;
+            font-family: 'Wix Madefor Display', sans-serif;
+            color: gray;
+            margin-top: -2vh;
+        }
+
+        .circle_image_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .circle {
+            padding-top: 10vh;
+            text-align: center;
+            width: 20%;
+            flex: 0 0 20%;
+            max-width: 20%;
+            margin: 0 2%;
+        }
+
+        .circle p {
+            color: gray;
+        }
+
+        .circle h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+        }
+
+        .circle img {
+            border-radius: 50%;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .menu_cat {
+            background-color: rgb(231, 231, 231);
+            padding-bottom: 12vh;
+
+        }
+
+        .full_menu {
+            display: block;
+            margin: 0 auto;
+            color: white;
+            background-color: rgb(190, 145, 61);
+            border: none;
+            padding: 15px 25px;
+            font-size: 14px;
+            margin-top: 12vh;
+
+        }
+
+        .full_menu:hover {
+            opacity: 0.8;
+        }
+
+        .video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20vh;
+            margin-bottom: 30vh;
+        }
+
+        .video_item {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .video_item img {
+            width: 90%;
+
+        }
+
+        .playback-sign {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: rgb(255, 255, 255);
+            margin-left: -23%;
+            margin-top: 14%;
+        }
+
+        .brand {
+            font-family: 'Wix Madefor Display', sans-serif;
+            color: rgb(173, 118, 14);
+            opacity: 0.6;
+            margin-top: 3vh;
+            margin-left: 8vw;
+
+        }
+
+        .playback_signs {
+            color: white;
+        }
+
+        .change {
+            font-family: 'Wix Madefor Display', sans-serif;
+            font-size: 6.5vh;
+            max-width: 60%;
+            font-weight: bolder;
+            margin-top: -.1vh;
+            margin-left: 8vw;
+        }
+
+        .exellence {
+            font-family: 'Wix Madefor Display', sans-serif;
+            font-weight: bold;
+            margin-top: -4vh;
+            margin-left: 8vw;
+
+        }
+
+        .lorem {
+            color: gray;
+            max-width: 40%;
+            margin-left: 8vw;
+        }
+
+
+        .started {
+            background-color: black;
+            display: block;
+            color: white;
+            border: none;
+            padding: 13px 30px;
+            font-size: 16px;
+            margin-top: 5vh;
+            margin-left: 8vw;
+
+        }
+
+        .started:hover {
+            opacity: 0.8;
+        }
+
+
+
+        .pricing_h2 {
+            font-family: 'Wix Madefor Display', sans-serif;
+            text-align: center;
+        }
+
+        .p_price {
+            font-family: 'Wix Madefor Display', sans-serif;
+            text-align: center;
+            margin-top: -2vh;
+            margin-bottom: 9vh;
+            font-weight: bold;
+            color: rgb(87, 87, 87);
+        }
+
+
+        .blog-container {
+            text-align: center;
+        }
+
+        .blog-container p {
+            color: #484747;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+
+        .blog-items {
+            display: flex;
+            margin: 10px 110px 180px 110px;
+        }
+
+        .blog-items h3 {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .blog-items p {
+            color: #484747;
+        }
+
+        .food1 {
+            width: 33%;
+            border: 5px solid #8C8C8C;
+            margin-right: 8px;
+            padding: 10px;
+        }
+
+        .food1 img {
+            width: 100%;
+        }
+
+        .food2 {
+            width: 33%;
+            border: 5px solid #8C8C8C;
+            margin-left: 8px;
+            margin-right: 8px;
+            padding: 10px;
+        }
+
+        .food2 img {
+            width: 100%;
+        }
+
+        .food3 {
+            width: 33%;
+            border: 5px solid #8C8C8C;
+            margin-left: 8px;
+            padding: 10px;
+        }
+
+        .food3 img {
+            width: 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: #000019;
+            color: white;
+            padding: 100px;
+            display: flex;
+        }
+
+        .footer-about {
+            width: 42%;
+            padding-right: 70px;
+        }
+
+        .footer-newsletter {
+            width: 43%;
+        }
+
+        .footer-follow {
+            width: 15%;
+        }
+
+        footer h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .newsletter-form {
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 12px;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .input-wrapper {
+            display: flex;
+        }
+
+        .newsletter-form input[type="email"] {
+            width: 320px;
+            padding: 10px;
+        }
+
+        .newsletter-form button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #CB9663;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .fa-arrow-right {
+            margin-left: 5px;
+        }
+
+
+
+
+
+        .price_items {
+            display: flex;
+            justify-content: center;
+        }
+
+        .plan {
+            width: 33%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            display: flex;
+            background-color: black;
+            color: white;
+            max-width: 90%;
+            margin: 0 auto;
+            justify-content: center;
+            height: 15vh;
+            align-items: center;
+            font-family: 'Wix Madefor Display', sans-serif;
+        }
+
+        .sections {
+            display: flex;
+            border: .1vh solid rgb(190, 190, 190);
+            max-width: 89.5%;
+            justify-content: center;
+            height: 10vh;
+            align-items: center;
+            margin: 0 auto;
+            border-bottom: none;
+            font-family: 'Wix Madefor Display', sans-serif;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+
+        .doller {
+            display: flex;
+            max-width: 89.5%;
+            justify-content: center;
+            height: 10vh;
+            align-items: center;
+            margin: 0 auto;
+            font-size: 2.3rem;
+            border: .1vh solid rgb(190, 190, 190);
+            border-bottom: none;
+        }
+
+        .per_month {
+            display: flex;
+            max-width: 89.5%;
+            justify-content: center;
+            height: 10vh;
+            align-items: center;
+            margin: 0 auto;
+            border: .1vh solid rgb(190, 190, 190);
+            border-top: none;
+            margin-top: -4vh;
+        }
+
+        .p_per_month {
+            color: gray;
+        }
+
+        .sign_up {
+            display: flex;
+            max-width: 89.5%;
+            justify-content: center;
+            height: 12vh;
+            align-items: center;
+            margin: 0 auto;
+            border: .1vh solid rgb(190, 190, 190);
+            border-top: none;
+            background-color: rgb(233, 232, 232);
+        }
+
+        .btn_sign_up {
+            color: white;
+            background-color: rgb(2, 177, 177);
+            border: none;
+            font-size: 1rem;
+            width: 35%;
+            height: 55%;
+        }
+
+        .btn_sign_up:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="navbar">
+        <ul>
+            <li><a class="active" href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li>
+                <a href="#">BLOG <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Travel</a>
+                    <a href="#">Food</a>
+                    <a href="#">Art</a>
+                </div>
+            </li>
+            <li><a href="#">ELEMENTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+    <p class="p_bake">WHENEVER WE BAKE, BAKE WITH OUR HEART</p>
+    <span class="heading_love">Love with baking items</span>
+    <p class="p_since">Since Americans in the South began roasting pigs publicly, Barbecues have been a staple of North
+        American living. For many, grilling becomes a routine mealtime activity.</p>
+
+    <button class="menu_check">Check Our Menu</button>
+    <div class="menu_cat">
+        <h1 class="heading_catagory">Category of available items</h1>
+        <p class="P_cat">They are grilling celebrities in their own right.</p>
+        <div class="circle_image_container">
+            <div class="circle">
+                <img src="img/xc1.jpg" alt="">
+                <h4>Pizza</h4>
+                <p>inappropriate behavior is often laughed off as "boys will be.</p>
+            </div>
+            <div class="circle">
+                <img src="img/xc2.jpg" alt="">
+                <h4>Bread</h4>
+                <p>inappropriate behavior is often laughed off as "boys will be.</p>
+            </div>
+            <div class="circle">
+                <img src="img/xc3.jpg" alt="">
+                <h4>Burgers</h4>
+                <p>inappropriate behavior is often laughed off as "boys will be.</p>
+            </div>
+            <div class="circle">
+                <img src="img/xc4.jpg" alt="">
+                <h4>Chicken</h4>
+                <p>inappropriate behavior is often laughed off as "boys will be.</p>
+            </div>
+        </div>
+        <button class="full_menu">View Full Menu</button>
+    </div>
+    <div class="video">
+
+        <div class="video_item">
+            <p class="brand">BRAND NEW APP TO BLOW YOUR MIND</p>
+            <p class="change">We've made a life
+                that will change you</p>
+            <p class="exellence">We are here to listen from you deliver exellence</p>
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmo d tempor incididunt
+                ut labore et dolore magna aliqua.</p>
+            <button class="started" type="submit">Get Started Now</button>
+        </div>
+        <div class="video_item">
+            <img src="img/video-bg.jpg" alt="">
+            <i class="fas fa-play playback-sign"></i>
+        </div>
+    </div>
+    <div class="pricing">
+        <h2 style="background-color: white;
+        color:black;  font-family: 'Wix Madefor Display', sans-serif;
+            text-align: center;
+            margin-top: -5vh;">PRICING</h2>
+        <p class="p_price">Choose a pricing plan that fits your needs.</p>
+    </div>
+
+    <section class="all">
+        <div class="price_items">
+            <div class="plan">
+                <h2>Basic</h2>
+                <div class="sections">
+                    <p class="bold">10 GB&nbsp</p>
+                    <p>Storage</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">10 &nbsp</p>
+                    <p>Emails</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">10 &nbsp</p>
+                    <p>Domains</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">Endless &nbsp</p>
+                    <p>Support</p>
+                </div>
+                <div class="doller">
+                    <p class="bold">$&nbsp</p>
+                    <p>10&nbsp</p>
+                </div>
+                <div class="per_month">
+                    <p class="p_per_month">Per month&nbsp</p>
+                </div>
+                <div class="sign_up">
+                    <button class="btn_sign_up"> <i class="fas fa-check"> </i>&nbspSign up</button>
+                </div>
+            </div>
+            <div class="plan">
+                <h2 style="
+                background-color: rgb(82, 82, 82);">Pro</h2>
+                <div class="sections">
+                    <p class="bold">25 GB&nbsp</p>
+                    <p>Storage</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">25 &nbsp</p>
+                    <p>Emails</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">50 &nbsp</p>
+                    <p>Domains</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">Endless &nbsp</p>
+                    <p>Support</p>
+                </div>
+                <div class="doller">
+                    <p class="bold">$&nbsp</p>
+                    <p>25&nbsp</p>
+                </div>
+                <div class="per_month">
+                    <p class="p_per_month">Per month&nbsp</p>
+                </div>
+                <div class="sign_up">
+                    <button class="btn_sign_up"> <i class="fas fa-check"> </i>&nbspSign up</button>
+                </div>
+            </div>
+            <div class="plan">
+                <h2>Premium</h2>
+                <div class="sections">
+                    <p class="bold">50 GB&nbsp</p>
+                    <p>Storage</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">50 &nbsp</p>
+                    <p>Emails</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">50 &nbsp</p>
+                    <p>Domains</p>
+                </div>
+                <div class="sections">
+                    <p class="bold">Endless &nbsp</p>
+                    <p>Support</p>
+                </div>
+                <div class="doller">
+                    <p class="bold">$&nbsp</p>
+                    <p>50&nbsp</p>
+                </div>
+                <div class="per_month">
+                    <p class="p_per_month">Per month&nbsp</p>
+                </div>
+                <div class="sign_up">
+                    <button class="btn_sign_up"> <i class="fas fa-check"> </i>&nbspSign up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="blog-container">
+            <h2 style="background-color: white;
+            color:black;  font-family: 'Wix Madefor Display', sans-serif;
+                text-align: center;
+                margin-top: 8vh;
+                ">Latest Posts From Our Blog</h2>
+            <p style="
+            color: gray;
+            margin-top: -5vh
+            ;">Do you want to share your love of cheese fondue with your children? Or did you just find out that
+                one of
+                your
+                fondue <br>
+                party guests doesn't drink alcohol.</p>
+        </div>
+
+        <div class="blog-items">
+
+            <div class="food1">
+                <img src="img/xb1.jpg" alt="Photo of food">
+                <br> <br> <br>
+                <h3>STOCKING YOUR RESTAURANT KITCHEN FINDING RELIABLE SELLERS</h3>
+                <br>
+                <p>Saving money - is something we would all like to do. Whether you are struggling to manage day to day
+                    or earning
+                    a six figure salary, saving is something we all think about.</p>
+            </div>
+
+            <div class="food2">
+                <img src="img/b2.jpg" alt="Photo of food">
+                <br> <br> <br>
+                <h3>COOKING FOR SPECIAL OCCASIONS COOKWARE IN THE BRICK AND MORTR</h3>
+                <br>
+                <p>Let's talk about meat fondue recipes and what you need to know first. Meat fondue also known as oil
+                    fondue is a
+                    method of cooking all kinds of meats, poultry, and seafood in a pot of heated oil.</p>
+            </div>
+
+            <div class="food3">
+                <img src="img/b3.jpg" alt="Photo of food">
+                <br> <br> <br>
+                <h3>WHEN YOUR MEAL BITES BACK TIPS FOR AVOIDING FOOD POISONING</h3>
+                <br>
+                <p>While some people really seem to have a knack for borbequing -always grilling up a perfect meal - for
+                    the rest of us,
+                    it is something that must be learned, not something that just comes naturally. Behave it or not,
+                    there is technique involved.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>If you own an Iphone, you've probably already worked out how much run it is to use it to watch
+                movies-it has that.</p>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Stay update with our latest</p>
+
+            <form class="newsletter-form">
+                <div class="input-wrapper">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="footer-follow">
+            <h3>Follow Us</h3>
+            <p>Let us be social</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
